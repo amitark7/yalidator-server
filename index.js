@@ -49,7 +49,8 @@ app.all("*", (req, res) => {
 });
 
 // Start the server
-const PORT = 3000;
-app.listen(PORT, () => {
+const PORT = process.env.PORT || 3000; // Default to 3000 if no environment variable is set
+app.listen(PORT, "0.0.0.0", () => {
+  // Ensure it's listening on 0.0.0.0
   console.log(`Server is running on http://localhost:${PORT}`);
 });
