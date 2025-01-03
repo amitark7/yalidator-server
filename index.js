@@ -16,8 +16,11 @@ app.use(
 // Middleware to parse JSON bodies
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.status("Hey This is Yallidator Server");
+});
 // Route for POST requests
-app.post("/", (req, res) => {
+app.post("/data", (req, res) => {
   // Get the client's IP address
   let clientIp =
     req.headers["x-forwarded-for"] ||
