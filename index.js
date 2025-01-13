@@ -1,8 +1,19 @@
 const express = require("express");
 const cors = require("cors");
+const mongoose = require("mongoose");
 
 // Initialize an Express app
 const app = express();
+mongoose
+  .connect(
+    "mongodb+srv://User123:Anubha88%40%40%23@cluster0.fu8ny.mongodb.net/fingerprintDB?retryWrites=true&w=majority&appName=Cluster0",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
+  .then(() => console.log("Connected to MongoDB Atlas using Mongoose!"))
+  .catch((err) => console.error("Connection error:", err));
 
 // Use CORS middleware
 app.use(
