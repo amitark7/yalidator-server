@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 const app = express();
 mongoose
   .connect(
-    "mongodb+srv://kumaramit21470:BaNo6Sxd3viZNpOb@cluster0.4zudpz7.mongodb.net/",
+    "mongodb+srv://User123:Anubha88%40%40%23@cluster0.fu8ny.mongodb.net/fingerprintDB",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
